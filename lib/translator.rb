@@ -19,6 +19,7 @@ end
 
 def get_japanese_emoticon(file_path, emoticon)
   # code goes here
+<<<<<<< HEAD
   tran_emoticon = nil
   apology = nil
   library = load_library(file_path)
@@ -35,6 +36,17 @@ def get_japanese_emoticon(file_path, emoticon)
     tran_emoticon
   end
   # binding.pry
+=======
+  library = load_library(file_path)
+  library.each_with_object({}) do |(key, value), in_prog|
+    value.each do |ke, val|
+      if !val == emoticon
+        return nil
+      end
+      # binding.pry
+    end
+  end
+>>>>>>> fabac3b24a63583e01e2fe23184dbc38cf11fbae
 end
 
 def get_english_meaning(file_path, emoticon)
